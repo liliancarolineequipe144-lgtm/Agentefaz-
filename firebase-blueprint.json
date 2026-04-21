@@ -1,0 +1,34 @@
+{
+  "entities": {
+    "Lead": {
+      "title": "Lead",
+      "description": "Uma empresa ou profissional prospectado.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "address": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "niche": { "type": "string" },
+        "status": { 
+          "type": "string",
+          "enum": ["novo", "contatado", "interessado", "fechado", "arquivado"]
+        },
+        "websiteFound": { "type": "boolean" },
+        "whatsappUrl": { "type": "string" },
+        "customMessage": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "ownerId": { "type": "string" }
+      },
+      "required": ["name", "status", "ownerId"]
+    }
+  },
+  "firestore": {
+    "leads/{leadId}": {
+      "schema": "Lead",
+      "description": "Coleção de leads coletados pelo usuário."
+    }
+  }
+}

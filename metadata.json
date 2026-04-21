@@ -1,0 +1,6 @@
+{
+  "name": "Agente Faz",
+  "description": "Busca inteligente de leads para empresas sem site. Coleta informações, gera abordagens via WhatsApp e exporta para CSV.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
